@@ -12,7 +12,12 @@ class PostStatistic extends \Mim\Model
 
     protected static $table = 'post_statistic';
 
-    protected static $chains = [];
+    protected static $chains = [
+        'post' => [
+            'model' => 'Post\\Model\\Post',
+            'field' => 'id'
+        ]
+    ];
 
     protected static $q = [];
 }
